@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>After Class 10.6</title>
+    <style>
+        h3{
+            background: red;
+            color: white;
+        }
+        #sidebar1{
+            box-sizing: border-box;
+            width: 200px;
+        }
+        #sidebar1 ul{
+            list-style-type: none;
+            padding: 0;
+            background: #f1f1f1;
+        }
+        #sidebar1 a{
+            display: block;
+            text-decoration: none;
+            padding: 8px 15px;
+            color: #000;
+        }
+        #sidebar1 a:hover{
+            background: #555;
+            color: white;
+        }
+        #sidebar2{
+            width: 200px;
+            box-sizing: border-box;
+        }
+        #sidebar2 h2{
+            margin: 0;
+        }
+        #sidebar2 h2 a{
+            display: block;
+            background: #3185bf;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+        }
+        #sidebar2 ul{
+            margin: 0;
+            padding: 0;
+            background: #f1f1f1;
+        }
+        #sidebar2 li a{
+            display: block;
+            padding: 8px 15px;
+            color: #000;
+            text-decoration: none;
+        }
+        #sidebar2 li a:hover{
+            background: #03a9f4;
+            color: white;
+        }
+        #navbar1 ul{
+            list-style-type: none;
+            padding: 0;
+            background: #333;
+            position: fixed;
+            top: 0;
+        }
+        #navbar1 li{
+            display: inline-block;
+        }
+        #navbar1 a{
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 14px 16px;
+        }
+        #navbar1 a:hover{
+            background-color: #111;
+        }
+        div.transition1{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            transition: width 2s,height 2s;
+        }
+        div.transition1:hover{
+            width: 300px;
+            height: 300px;
+        }
+        div.animated_div{
+            width: 60px;
+            height: 40px;
+            background-color: #92B901;
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 1.5em;
+            text-align: center;
+            padding: 10px;
+            margin: 5px;
+            transition-property: width,height,background,font-size,opacity;
+            transition-duration: 1s,1s,1s,1s,1s;
+            border-radius: 5px;
+            opacity: 0.4;
+        }
+        div.animated_div:hover{
+            opacity: 1;
+            background-color: #1ec7e6;
+            width: 120px;
+            height: 80px;
+            font-size: 3.5em;
+        }
+        div.translate{
+            width: 300px;
+            height: 100px;
+            background-color: yellow;
+            border: 1px solid black;
+            transition: transform 1s;
+        }
+        div.translate:hover{
+            transform: translate(50px,100px);
+        }
+        div.rotate{
+            width: 300px;
+            height: 100px;
+            background-color: yellow;
+            border: 1px solid black;
+            transition: transform 2s;
+        }
+        div.rotate:hover{
+            transform: rotate(1080deg);
+        }
+        div.scale{
+            width: 300px;
+            height: 100px;
+            background-color: yellow;
+            border: 1px solid black;
+            transition: transform 1s;
+        }
+        div.scale:hover{
+            transform: scale(2,3);
+        }
+        h1.text1{
+            text-shadow: 2px 2px
+        }
+        h1.text2{
+            text-shadow: 2px 2px 5px red;
+        }
+        h1.text3{
+            text-shadow: 0 0 3px #ff0000;
+        }
+        h1.text4{
+            text-shadow: 0 0 3px #ff0000, 0 0 5px #0000ff
+        }
+        h1.text5{
+            color: white;
+            text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+        }
+        div.box1{
+            width: 300px;
+            height: 100px;
+            padding: 15px;
+            background-color: yellow;
+            box-shadow: 10px 10px 5px grey;
+        }
+        img.box2{
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 5px;
+            width: 150px;
+        }
+        img.box2:hover{
+            box-shadow: 0 0 2px 1px rgba(0,140,186,0.5);
+        }
+        div.card{
+            width: 250px;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+            text-align: center;
+        }
+        div.header{
+            background-color: #4caf50;
+            color: white;
+            padding: 10px;
+            font-size: 3em;
+            font-weight: bold;
+        }
+        div.container{
+            padding: 10px;
+        }
+        .dropdown-1{
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-1 .dropdown-menu{
+            display: none;
+            position: absolute;
+            background-color: red;
+        }
+        .dropdown-1:hover .dropdown-menu{
+            display: block;
+        }
+        .dropdown-2{
+            position: relative;
+            display: inline-block;
+        }
+        button.dropdown-toggle-2{
+            background-color: #4caf50;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+        .dropdown-menu-2{
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 16px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        }
+        .dropdown-2:hover .dropdown-menu-2{
+            display: block;
+        }
+        .dropdown-3{
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-3 .dropdown-toggle-3{
+            width: 200px;
+            height: 150px;
+        }
+        .dropdown-3 .dropdown-menu-3{
+            display: none;
+            width: 400px;
+            height: 300px;
+            text-align: center;
+            z-index: 1;
+        }
+        .dropdown-3:hover .dropdown-menu-3{
+            display: block;
+        }
+        .full{
+            height: 100%;
+            border: 2px solid red;
+        }
+    </style>
+</head>
+<body>
+<h3>Box-sizing</h3>
+<div style="display: inline-block;box-sizing: border-box;width: 200px; border: 1px solid red; margin: 20px;
+padding: 15px">
+    This is box-sizng: border-box
+</div>
+<br/>
+<div style="display: inline-block;box-sizing: border-box;width: 200px;border: 1px solid red;margin: 20px;padding: 15px">
+    <ul>
+        <li>List item 1</li>
+        <li>List item 2</li>
+        <li>List item 3</li>
+        <li>List item 4</li>
+    </ul>
+</div>
+<h3>Navigation Bar</h3>
+<div id="sidebar1">
+    <ul>
+        <li><a href="#">Home</a> </li>
+        <li><a href="#">News</a> </li>
+        <li><a href="#">Contact</a> </li>
+        <li><a href="#">About</a> </li>
+    </ul>
+</div>
+<div id="sidebar2">
+    <h2><a href="#">云技术管理</a> </h2>
+    <ul>
+        <li><a href="#">云服务器</a> </li>
+        <li><a href="#">云数据库</a> </li>
+        <li><a href="#">负载均衡</a> </li>
+    </ul>
+</div>
+<div id="navbar1">
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Logout</a></li>
+    </ul>
+</div>
+<h3>CSS Transitions</h3>
+<div class="transition1"></div>
+<div class="animated_div">🥧</div>
+<h3>CSS 2D Transforms</h3>
+<p>The translate() moves an element from i</p>
+<div class="translate">
+    <p>This div element is moved 50 pixels to the right,
+    and 100 pixels down from its current position.</p>
+</div>
+<div class="rotate">
+    The div element is rotated clockwise 1080 degrees.
+</div>
+<div class="scale">
+    The div element is two times of its original width and three times
+    of its original height.
+</div>
+<h3>CSS Shadow Effects</h3>
+<h1 class="text1">Text-shadow effect</h1>
+<h1 class="text2">Test-shadow effect</h1>
+<h1 class="text3">Test-shadow effect</h1>
+<h1 class="text4">Test-shadow effect</h1>
+<h1 class="text5">Test-shadow effect</h1>
+<div class="box1">
+    This is a div element with a box-shadow.
+</div>
+<img src="../../resources/images/waves.png" alt="waves" class="box2">
+<h3>Card</h3>
+<div class="card">
+    <div class="header">
+        <p>1</p>
+    </div>
+    <div class="container">
+        <p>October, 2045</p>
+    </div>
+</div>
+<h3>CSS Dropdowns</h3>
+<div class="dropdown-1">
+    <span>Mouse over me</span>
+    <div class="dropdown-menu">
+        <p>Hello World!</p>
+    </div>
+</div>
+<div class="dropdown-2">
+    <button class="dropdown-toggle-2">
+        Mouse over me
+    </button>
+    <div class="dropdown-menu-2">
+        <ul>
+            <li>Link1</li>
+            <li>Link2</li>
+            <li>Link3</li>
+            <li>Link4</li>
+        </ul>
+    </div>
+</div>
+<div class="dropdown-3">
+    <img class="dropdown-toggle-3" src="../../resources/images/waves.png" alt="waves">
+    <div class="dropdown-menu-3">
+        <img src="../../resources/images/waves.png" alt="waves">
+        <p>Waves</p>
+    </div>
+</div>
+<h3>Viewport units</h3>
+<div class="full">Full Screen</div>
+</body>
+</html>

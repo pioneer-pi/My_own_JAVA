@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Homework4_2</title>
+    <link href="https://cdn.bootcss.com/material-design-icons/3.0.1/iconfont/material-icons.css" rel="stylesheet">
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            display: flex;
+        }
+        .navigation{
+            position: absolute;
+            background-color: #ffba02;
+            width: 60px;
+            transition: width 0.5s;
+        }
+        .navigation a{
+            display: block;
+            color: black;
+            text-decoration: none;
+        }
+        .navigation i{
+            vertical-align: middle;
+            padding: 15px;
+        }
+        .text{
+            padding-top: 10px;
+            padding-left: 60px;
+        }
+        .navigation span{
+            display: none;
+        }
+        .navigation:hover{
+            width: 200px;
+        }
+        .navigation:hover ul{
+            width: 200px;
+        }
+        .navigation:hover span{
+            display: inline;
+        }
+        .navigation:hover i{
+            color: red;
+        }
+        .navigation li:hover{
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="navigation">
+        <ul>
+            <li>
+                <a href="#"><i class="material-icons">dashboard</i><span>Dashboard</span></a>
+            </li>
+            <li>
+                <a href="#"><i class="material-icons">desktop_mac</i><span>Computer</span></a>
+            </li>
+            <li>
+                <a href="#"><i class="material-icons">timelapse</i><span>Timelapse</span></a>
+            </li>
+            <li>
+                <a href="#"><i class="material-icons">style</i><span>style</span></a>
+            </li>
+            <li>
+                <a href="#"><i class="material-icons">dialpad</i><span>dialpad</span></a>
+            </li>
+        </ul>
+    </div>
+    <div class="text">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Eaque eos,ipsa perferendis qui rerum unde! Aliquid distinctio
+            dolorum exercitationem illo itaque placeat provident quam repellendus
+            unde vero? Ab error inventore iure voluptate.</p>
+    </div>
+</div>
+</body>
+</html>

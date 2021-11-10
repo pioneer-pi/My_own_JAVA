@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div.fade{
+            width: 80px;
+            height: 80px;
+            background-color: red;
+            margin: 10px;
+        }
+        #flip,#panel{
+            padding: 5px;
+            text-align: center;
+            background-color: #e5eecc;
+            border: 1px solid #c3c3c3;
+        }
+        #panel{
+            padding: 50px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<h3>jQuery Effects - Hide and Show</h3>
+<p id="hide">Hide</p>
+<p id="show">Show</p>
+<p id="hide2">Hide2</p>
+<p id="toggle">toggle</p>
+
+<h3>jQuery Effects - 淡入淡出</h3>
+<button id="fadein">fadein</button>
+<button id="fadeout">fadeout</button>
+<button id="fadetoggle">fadetoggle</button>
+<button id="fadeto">fadeto</button>
+<div class="fade" id="fade1"></div>
+<div class="fade" id="fade2"></div>
+<div class="fade" id="fade3"></div>
+
+<h3>jQuery Effects - 滑动</h3>
+<div id="flip">Click to slide the panel down or up.</div>
+<div id="panel">Hello world!</div>
+
+<h3>jQuery - 添加元素</h3>
+<p id="app_p">This is a paragrpah.</p>
+<ol id="app_ol">
+    <li>List item1</li>
+    <li>List item2</li>
+    <li>List item3</li>
+</ol>
+<button id="apptext">Append text</button>
+<button id="appenditem">Append item</button>
+<button id="removeitem">Remove item</button>
+
+<h3>jQuery - CSS - Chaining</h3>
+<p id="p1">I am a paragraph named p1</p>
+
+<ol id="adv_ol">
+    <li>HTML实验</li>
+    <li>CSS实验</li>
+</ol>
+<input id="exp">
+<button id="advitem">追加</button>
+<br>
+<br>
+<label>
+    <input type="checkbox" name="items">6TB机械键盘
+</label>
+<lable>
+    <input type="checkbox" name="items">512GB SSD
+</lable>
+<label>
+    <input type="checkbox" name="items">15GB DDR4
+</label>
+</body>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    //hide show toggle
+    $("#hide").click(()=>{
+        $("#hide").hide();
+    });
+    $("#show").click(()=>{
+        $("#show").show();
+    });
+    $("#hide2").click(()=>{
+        $("#hide2").hide(1000);
+    });
+    $("#toggle").click(()=>{
+        $("#toggle").toggle(1000,function (){
+            $("toggle").text("toggle again");
+        })
+    })
+
+    //fade
+    $("#fadein").click(()=>{
+        $("#fade1").fadeIn();
+        $("#fade2").fadeIn("slow");
+        $("#fade3").fadeIn(3000);
+    });
+    $("#fadeout").click(()=>{
+        $("#fade1").fadeOut();
+        $("#fade2").fadeOut("slow");
+        $("#fade3").fadeOut(3000);
+    });
+    $("#fadetoggle").click(()=>{
+        $("#fade1").fadeToggle();
+        $("#fade2").fadeToggle("slow");
+        $("#fade3").fadeToggle(3000);
+    });
+    $("#fadeto").click(()=>{
+        $("#fade1").fadeTo("slow",0.15);
+        $("#fade2").fadeTo("slow",0.4);
+        $("#fade3").fadeTo("slow",0.7);
+    });
+    $("#flip").click(()=>{
+        $("#panel").slideToggle("slow");
+    });
+    $("#apptext").click(() =>{
+        $("#app_p").append("<b>Appended text</b>");
+    });
+    $("#appenditem").click(()=>{
+        $("#app_ol").append("<li>Append list item</li>");
+    });
+    $("#removeitem").click(()=>{
+        $("#app_ol").children().last().remove();
+    })
+    $("#p1").click(() =>{
+        $("#p1").css("color","red").slideUp(2000).slideDown(2000);
+    });
+    $("#advitem").click(()=>{
+        let input = $("#exp");
+        let context = input.val();
+        input.val("");
+        let newItem = `<li>${context}</li>`;
+        newItem.css("display","none");
+        $("#adv_ol").append(newItem);
+        newItem.fadeIn(2000);
+    })
+    {
+        const amount = 2;
+        const checkboxs = $("input[name=items]");
+        checkboxs.click(()=>{
+            let dis = checkboxs.filter(":checked").length>=amount;
+            checkboxs.not(":checked").prop("disabled",dis);
+        })
+    }
+</script>
+</html>

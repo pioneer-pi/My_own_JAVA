@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="222.27.161.245" uuid="ad038774-ae20-4e77-abd4-79d896f61242">
+      <driver-ref>oracle</driver-ref>
+      <synchronize>true</synchronize>
+      <auto-commit>false</auto-commit>
+      <jdbc-driver>oracle.jdbc.OracleDriver</jdbc-driver>
+      <jdbc-url>jdbc:oracle:thin:@222.27.161.245:1521:orcl</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+      <time-zone>Asia/Shanghai</time-zone>
+    </data-source>
+  </component>
+</project>

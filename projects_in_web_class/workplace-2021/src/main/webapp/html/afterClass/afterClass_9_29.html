@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>After Class 9.29</title>
+    <style>
+        #border{
+            margin: 50px;
+            padding: 50px;
+            border: 1em solid #4099FF;
+            color: #4099FF;
+        }
+        div.padding{
+            border: 1px solid black;
+            background-color: lightblue;
+            padding: 50px 30px 50px 80px;
+        }
+        div.margin{
+            width: 300px;
+            margin: 100px 150px 100px 80px;
+        }
+        #CSS_Image{
+            max-width: 100%;
+            /*width: 100%;*/
+            height: auto;
+            object-fit: contain;
+        }
+        div.bg-green{
+            background-color: green;
+            padding: 15px;
+        }
+        div.op1{
+            opacity: 0.1;
+        }
+        div.op1:hover{
+            opacity: 0.5;
+        }
+        div.op2{
+            opacity: 0.8;
+        }
+        div.op2:hover{
+            opacity: 0.3;
+        }
+        #f1 input[type=text]{
+            width: 100%;
+        }
+        #f2 input[type=password]{
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px;
+        }
+        #f3 input[type=text]{
+            width: 100%;
+            padding: 12px 20px;
+            border: 1px solid seagreen;
+            border-radius: 4px;
+        }
+        #f3 input:focus{
+            border: 2px solid red;
+            outline: none;
+        }
+        #f5 input{
+            border: none;
+            outline: none;
+            border-bottom: 1px green solid;
+        }
+        #f5 input:focus{
+            border-bottom: 2px red solid;
+        }
+        button{
+            border-radius: 4px;
+            border: none;
+            padding: 16px 32px;
+            cursor: pointer;
+        }
+        button[type=submit]{
+            background-color: green;
+            color: white;
+            opacity: 0.7;
+        }
+        button[type=reset]{
+            background-color: red;
+            color: white;
+            opacity: 0.7;
+        }
+        button[type=submit]:hover,
+        button[type=reset]:hover{
+            opacity: 1.0;
+        }
+
+        #list ul{
+            background-color: #ff9999;
+            padding: 20px;
+        }
+        #list ul li{
+            background-color: #ffe5e5;
+            padding: 5px;
+            margin: 5px;
+        }
+        #list2{
+            padding: 10px;
+            border: 1px solid red;
+        }
+        #list2 ul{
+            border: 1px solid red;
+            padding: 0; /*取消li与ul之间的空间*/
+            list-style: none; /*取消li的样式*/
+        }
+        #table1 table,#table1 th,#table1 td{
+            border: 1px solid black;
+        }
+        #table1{
+            border-collapse: collapse;
+            width: 100%
+        }
+        #table1 td,#table1 th{
+            text-align: center;
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+<h3>Border</h3>
+<p id="border">Border</p>
+<h3>Padding</h3>
+<div class="padding">This div element has a top
+padding of 50px,a right padding of 30px,a bottom padding of 50px,
+and a left padding of 80px.</div>
+<h3>Margin</h3>
+<div class="margin padding">
+    This div element has a top margin of 100px,a right margin of 150px,
+    a bottom margin of 100px,and a left margin of 80px.
+</div>
+<h3>Object-fit</h3>
+<img id="CSS_Image" src="../../resources/images/waves2.png" alt="waves2">
+<h3>CSS Text</h3>
+<p style="text-decoration: overline">This is text-decoration: overline</p>
+<p style="text-decoration: line-through">This is text-decoration: line-through</p>
+<p style="text-decoration: underline">This is text-decoration: underline</p>
+<a href="https://www.W3schools.com" style="text-decoration: none">W3Schools.com</a>
+<p style="text-indent: 1em">In my younger and more vulnerable.</p>
+<h3>CSS Fonts</h3>
+<p style="font-family: 'Times New Roman',Times,Serif">Font-family: Times New Roman,Times and Serif</p>
+<p style="font-family: '宋体'">Font-family: 宋体</p>
+<p style="font-family: Arial,Helvetica, sans-serif">Font-family: Arial,Helvetica, sans-serif</p>
+<p style="font-style: normal">This is a paragraph in normal style.</p>
+<p style="font-style: italic">This is a paragraph in italic style.</p>
+<p style="font-style: oblique">This is a paragraph in oblique style.</p>
+<p style="font-size: 2em">This font-size is 2em</p>
+<h3>CSS Opacity透明度</h3>
+<div class="bg-green op1">opacity 0.1</div>
+<div class="bg-green op2">opacity 0.8</div>
+<div style="opacity: 0.5">仅背景透明，文本显示正常。</div>
+<h3>CSS Forms</h3>
+<form id="f1">
+    <label>First Name</label><br/>
+    <input type="text">
+</form>
+<form id="f2">
+    <label>Password</label><br/>
+    <input type="password">
+</form>
+<form id="f3">
+    <label>First Name</label><br/>
+    <input type="text">
+</form>
+<form id="f5">
+    <input type="text">
+</form>
+<h3>Button</h3>
+<button type="submit">
+    提交
+</button>
+<button type="reset">
+    取消
+</button>
+<br/>
+<hr>
+<h1>CSS List Tables Display</h1>
+<h3>CSS List</h3>
+<div id="list">
+    <ul>
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Coca Cola</li>
+    </ul>
+</div>
+<div id="list2">
+    <ul>
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Coca Cola</li>
+    </ul>
+</div>
+<h3>CSS Tables</h3>
+<table id="table1">
+    <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+    </tr>
+    <tr>
+        <td>Peter</td>
+        <td>Griffin</td>
+    </tr>
+    <tr>
+        <td>Lois</td>
+        <td>Griffin</td>
+    </tr>
+</table>
+</body>
+</html>

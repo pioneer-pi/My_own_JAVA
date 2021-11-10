@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Experiment3</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        .row{
+            display: flex;
+            align-items: flex-start;
+            border: 1px solid red;
+            border-radius: 8px;
+            padding: 10px;
+            background-color: #ffec99;
+        }
+        .sidebar,.content{
+            border: 1px solid red;
+            border-radius: 8px;
+            padding: 10px;
+        }
+        .navigation ul{
+            display: flex;
+            background-color: #333;
+        }
+        .navigation li{
+            list-style-type: none;
+            padding: 15px 25px;
+        }
+        .navigation a{
+            color: white;
+            text-decoration: none;
+        }
+        #logout{
+            margin-left: auto;
+        }
+        .navigation li:hover{
+            background-color: black;
+        }
+        .sidebar{
+            min-width: 200px;
+        }
+        .sidebar h2{
+            background-color: #3185bf;
+            color: white;
+            padding: 10px 20px;
+        }
+        .sidebar ul{
+            list-style-type: none;
+            background-color: #f1f1f1;
+        }
+        .sidebar a{
+            display: block;
+            text-decoration: none;
+            padding: 10px 20px;
+            color: black;
+            transition: transform 0.5s;
+        }
+        .sidebar a:hover{
+            background-color: #03a9f4;
+            transform: scale(1.1);
+            color: white;
+        }
+        .content{
+            flex-grow: 1;
+        }
+        .footer{
+            width: 100%;
+            margin: auto;
+            text-align: center;
+        }
+        .col-md-1 {width: 8.33%;}
+        .col-md-2 {width: 16.67%;}
+        .col-md-3 {width: 25%;}
+        .col-md-4 {width: 33.33%;}
+        .col-md-5 {width: 41.67%;}
+        .col-md-6 {width: 50%;}
+        .col-md-7 {width: 58.33%;}
+        .col-md-8 {width: 66.67%;}
+        .col-md-9 {width: 75%;}
+        .col-md-10 {width: 83.33%;}
+        .col-md-11 {width: 91.67%;}
+        .col-md-12 {width: 100%;}
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="navigation col-md-12">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">News</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">About</a></li>
+                <li id="logout"><a href="#">Logout</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="sidebar col-md-2">
+            <div class="sidebar-group">
+                <h2>云技术管理</h2>
+                <ul>
+                    <li><a href="#">云服务器</a></li>
+                    <li><a href="#">云数据库</a></li>
+                    <li><a href="#">负载均衡</a></li>
+                </ul>
+            </div>
+            <div class="sidebar-group">
+                <h2>安全管理</h2>
+                <ul>
+                    <li><a href="#">云盾控制台</a></li>
+                    <li><a href="#">DDoS高防IP</a></li>
+                    <li><a href="#">Web应用防火墙</a></li>
+                    <li><a href="#">CA证书服务</a></li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="content col-md-9">
+            <h1>设计内容</h1>
+            <p>为各部分区域设计统一样式；全局取消元素内外边距，按box尺寸计算</p>
+            <h3>需求0</h3>
+            <p>基于当前HTML代码，弹性栅格布局页面。header/footer占1行；main中sidebar最小宽度200px；article占剩余全部。 行中空间不足元素不换行，由响应式布局决定小尺寸显式效果</p>
+            <h3>上导航+1</h3>
+            <p>基于弹性布局，为header中的上导航添加背景色/悬浮字体颜色等样式，且将logout推至最右侧</p>
+            <h3>页脚+1</h3>
+            <p>元素居中，字体居中</p>
+            <h3>左侧边栏+1</h3>
+            <p>为左侧边栏添加样式，添加背景色/字体色/悬浮等等样式</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="footer">
+            <p>东北林业大学</p>
+            <p>软件工程专业 2046©</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

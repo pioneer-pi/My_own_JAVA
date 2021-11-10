@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Changed_homework2_2</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            display: flex;
+        }
+        .card{
+            flex-direction: row;
+            width: 300px;
+            padding: 10px;
+            margin: 10px;
+            justify-content: center;
+        }
+        .header{
+            text-align: center;
+            transform: translateY(100px);
+            transition: transform 0.5s;
+            position: relative;
+            background-color: rgba(255,255,255,1.0);
+            z-index: 99;
+        }
+        .header img{
+            border-radius: 50%;
+            opacity: 0.5;
+            object-fit: contain;
+            transition: opacity 0.5s;
+        }
+        .content{
+            text-align: justify;
+            transform: translateY(-100px);
+            opacity: 0.5;
+            transition: transform 0.5s,opacity 0.5s;
+        }
+        .content p{
+            height: 200px;
+            /*overflow: hidden;*/
+        }
+        .content a{
+            display: inline-block;
+            list-style-type: none;
+            background-color: lightcoral;
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            border-radius: 8px;
+        }
+        .card:hover img{
+            opacity: 1;
+        }
+        .card:hover .header{
+            transform: translateY(0px);
+        }
+        .card:hover .content{
+            transform: translateY(0);
+            opacity: 1.0;
+        }
+        .card:hover a{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="card">
+        <div class="header">
+            <img src="https://picsum.photos/250?random=1" alt="face">
+        </div>
+        <div class="content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt dicta ex laudantium ratione sint.
+                Aperiam dignissimos enim eos ex laudantium maxime neque nobis nulla odio rem soluta totam, unde
+                voluptatem voluptates, voluptatum!</p>
+            <a href="">Read More</a>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="header">
+            <img src="https://picsum.photos/250?random=2" alt="face">
+        </div>
+        <div class="content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt dicta ex laudantium ratione sint.
+                Aperiam dignissimos enim eos ex laudantium maxime neque nobis nulla odio rem soluta totam, unde
+                voluptatem voluptates, voluptatum!</p>
+            <a href="">Read More</a>
+        </div>
+    </div>
+    <div class="card">
+        <div class="header">
+            <img src="https://picsum.photos/250?random=3" alt="face">
+        </div>
+        <div class="content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt dicta ex laudantium ratione sint.
+                Aperiam dignissimos enim eos ex laudantium maxime neque nobis nulla odio rem soluta totam, unde
+                voluptatem voluptates, voluptatum!</p>
+            <a href="">Read More</a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

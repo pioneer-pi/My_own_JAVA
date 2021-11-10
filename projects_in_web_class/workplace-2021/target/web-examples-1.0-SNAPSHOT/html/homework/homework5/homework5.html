@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.bootcss.com/material-design-icons/3.0.1/iconfont/material-icons.css" rel="stylesheet">
+    <title>Homework5_1</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        .fab{
+            align-items: center;
+            position: absolute;
+            right: 0;
+            top: 0;
+            padding: 50px;
+            /*padding: 0;*/
+        }
+        button .material-icons{
+            color: #03a9f4;
+            font-size: 5em;
+        }
+        .fab-menu{
+            text-align: center;
+        }
+        .fab-menu .material-icons{
+            color: #03a9f4;
+            font-size: 3em;
+        }
+        .fab-menu a{
+            text-decoration: none;
+        }
+        .fab-menu ul{
+            list-style-type: none;
+            display: none;
+        }
+        #delete .material-icons{
+            color: red;
+        }
+        button{
+            cursor: pointer;
+            border: white;
+            background-color: white;
+            transition: transform 0.7s;
+        }
+        .fab:hover #fab-button{
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body>
+<div class="fab-container">
+    <div class="fab">
+        <div class="fab-btn">
+            <button type="button" id="fab-button"><i class="material-icons">account_circle</i></button>
+        </div>
+        <div class="fab-menu">
+            <ul>
+                <li><a href="#"><i class="material-icons">create</i></a></li>
+                <li><a href="#"><i class="material-icons">color_lens</i></a></li>
+                <li><a href="#" id="delete"><i class="material-icons">delete_forever</i></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+
+    $(function (){
+
+    })
+    $(document).ready(function (){
+        // $(".fab").hover(()=>{
+        //     $("#fab-button").html("<i class=\"material-icons\">remove_circle_outline</i>");
+        //     $(".fab-menu ul").fadeToggle();
+        // })
+
+        // secondway
+        $(".fab").on({
+            mouseenter: function (){
+                $("#fab-button").html("<i class='material-icons'>remove_circle</i>")
+                $(".fab-menu ul").fadeIn(700);
+            },
+            mouseleave: function (){
+                $("#fab-button").html("<i class='material-icons'>account_circle</i>")
+                $(".fab-menu ul").fadeOut(700);
+            }
+        })
+    })
+</script>
+</html>

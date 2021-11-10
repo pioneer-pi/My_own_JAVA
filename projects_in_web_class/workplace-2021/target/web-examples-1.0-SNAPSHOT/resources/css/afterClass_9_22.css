@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+ p:hover{
+     color: red;
+     text-align: center;
+ }
+#para1{
+    background-color: #4099FF;
+}
+.center{
+    text-align: start;
+}
+h4.center{
+    background-color: pink;
+}
+div.container p{
+    background-color: tan;
+}
+div.container2>p{
+    background-color: aqua;
+}
+div.container3+p{
+    background-color: green;
+}
+div.container4>div.general~p{
+    background-color: rebeccapurple;
+}
+a[target]{
+    background-color: yellow;
+}
+div.peseudo{
+    background-color: green;
+    color: wheat;
+    padding: 25px;
+    text-align: center;
+}
+div.peseudo:hover{
+    background-color: blue;
+}
+#nth p:nth-child(even){
+    background-color: red;
+}
+#nth p:nth-child(odd){
+    background-color: green;
+}
+input:invalid{
+    border: 2px solid red;
+}

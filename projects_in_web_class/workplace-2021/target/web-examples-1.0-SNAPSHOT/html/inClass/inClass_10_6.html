@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>In Class 10.6</title>
+    <style>
+        #sidebar1{
+            width: 200px;
+            box-sizing: border-box;
+        }
+        #sidebar1 ul{
+            list-style-type: none;
+            background: #f1f1f1;
+            padding: 0;
+        }
+        #sidebar1 a{
+            display: block;
+            padding: 8px 15px;
+            color: #000;
+            text-decoration: none;
+        }
+        #sidebar1 a:hover{
+            background: #555;
+            color: white;
+        }
+        .dropdown-1{
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-1 .dropdown-menu{
+            display: none;
+            position: absolute;
+            background: red;
+        }
+        .dropdown-1:hover .dropdown-menu{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<div id="sidebar1">
+    <ul>
+        <li><a href="#">Home</a> </li>
+        <li><a href="#">News</a> </li>
+        <li><a href="#">Contact</a> </li>
+        <li><a href="#">About</a> </li>
+    </ul>
+</div>
+<div class="card">
+    <div class="header">
+        <p>1</p>
+    </div>
+    <div class="container">
+        <p>October, 2046</p>
+    </div>
+</div>
+<div class="dropdown-1">
+    <span>Mouse over me</span>
+    <div class="dropdown-menu">
+        <p>Hello World!</p>
+    </div>
+</div>
+<div class="full" style="width: 100vw; height: 100vh;margin: 0">
+    FULL Scrre
+</div>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>After Class 9.27</title>
+    <style>
+        #px1{
+            font-size: 20px;
+            line-height: 3em;
+        }
+    /*    line-height代表着行距 */
+        #px2{
+            font-size: 30px;
+            border: 2px solid black;
+        }
+        #em1{
+            font-size: 0.5em;
+        }
+        #indent{
+            font-size: 20px;
+            text-indent: 2em;
+        }
+        #rem1{
+            font-size: 30px;
+            border: 1px solid black;
+        }
+        #rem2{
+            font-size: 0.5rem;
+        }
+        #father{
+            width: 80%;
+            font-size: 30px;
+            border: 1px solid black;
+            margin-top: 50px;
+            padding-right: 10px;
+        }
+        #son{
+            width: 50%;
+            font-size: 80%;
+            border: 1px solid black;
+            margin-top: 50px;
+            margin-right: 50px;
+            margin-left: 50px;
+            padding-right: 50px;
+            padding-left: 50px;
+        }
+        div.padding{
+            border: 1px solid black;
+            background-color: lightblue;
+            padding: 50px 30px 50px 80px;
+        }
+        div.margin{
+            border: 1px solid black;
+            margin: 100px 150px 100px 80px;
+            background-color: lightblue;
+        }
+        div.background{
+            padding: 100px;
+            margin: 100px;
+            background: lightblue url("../../resources/images/waves.png") repeat right bottom;
+        }
+        img{
+            max-width: 100%;
+            width: 200px;
+            height: 300px;
+            /*padding: 100px;*/
+            /*margin: 100px;*/
+            object-fit: contain;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+<p style="font-size: 1.5em">The style of this document</p>
+<h3>CSS Units</h3>
+<p id="px1">These paragraphs have a calculated line-height</p>
+<div id="px2">The font-size of the div element is set to 30px
+    <span id="em1">
+        The span element inside the div element.
+    </span>
+</div>
+<p id="indent">首行缩进2字符长度，与字体实际尺寸无关</p>
+<div id="rem1">The font-size of div is 30px
+<span id="rem2">
+    The span of font-size is 16px*0.5
+</span></div>
+<br/>
+<div id="father">
+    Father<br/>
+    <div id="son">
+        Son
+    </div>
+</div><br/>
+<h3>Border</h3>
+<p style="border: 2px solid red">Normal border</p>
+<p style="border: 2px groove red;border-radius: 5px">Round groove border</p>
+<p style="border: 2px solid red;border-radius: 8px">Rounder border</p>
+<p style="border: 2px solid red;border-radius: 12px">Roundest border</p>
+<h3>Padding</h3>
+<div class="padding">This div element has a top padding of 50px,
+a right padding of 30px,a bottom padding of 50px,and a left padding
+of 80px.</div>
+<h2>Using individual margin properites</h2>
+<div class="margin padding">This div element has a top margin of 100px,
+a right margin of 150px, a bottom margin of 100px, and a left margin of
+80px.</div>
+<h3>Background</h3>
+<div class="background">
+    CSS background example!
+</div>
+<h3>CSS Images</h3>
+<img src="../../resources/images/waves2.png" alt="My wall paper">
+</body>
+</html>

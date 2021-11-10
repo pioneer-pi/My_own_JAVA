@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>After Class 9.22: Some basic knowledge about CSS</title>
+    <link  rel="stylesheet" href="../../resources/css/afterClass_9_22.css">
+</head>
+<body>
+<!--元素选择器-->
+<p>Every paragraph will be affected by the style.</p>
+<p>Me too!</p>
+<p>And me!</p>
+<br/>
+<!--id选择器-->
+<p id="para1">Hello World!</p>
+<p>This paragraph is not affected by the id选择器</p>
+<br/>
+<!--类选择器-->
+<h4 class="center">Hello</h4>
+<h4 class="center">World!</h4>
+<p class="center">This paragraph</p>
+<br/>
+<!--组合选择器-->
+<h3>组合选择器</h3>
+    后代选择器:descendant selector(space)
+<div class="container">
+    <p>Paragraph0<p>PPPP</p></p>
+    <p>Paragraph 1 in the div</p>
+    <p>Paragraph 2 in the div</p>
+    <div>
+        <p>Paragraph 3 in the div</p>
+    </div>
+</div>
+<div>
+<p>Paragraph 1 not in the div</p>
+</div>
+    子选择器:child selector(>)
+<div class="container2">
+    <span>span:<p>p</p></span>
+    <p>Paragraph 1 in the div_container2</p>
+    <p>Paragraph 2 in the div_container2</p>
+    <div>
+        <p>Paragraph 3 in the div</p>
+    </div>
+</div>
+<p>Paragraph 4 not in the div_container2</p>
+
+    同级紧邻选择器:adjacent sibling selector(+)
+<p>Paragraph 0 not in a div_container3</p>
+<div class="container3">
+    <p>Paragraph 1 in the div_container3</p>
+    <p>Paragraph 2 in the div_container3</p>
+</div>
+<div><p>Paragraph in another div</p></div>
+<p>Paragraph 3 not in the div_container3</p>
+<p>Paragraph 4 not in the div_container3</p>
+
+    同级选择器:sibling selector(~)
+<div class="container4">
+    <p>Paragraph 1 in div_container4</p>
+    <div class="general">
+        <p>Paragraph 2 in div_general.</p>
+    </div>
+    <p>Paragraph 3 in div_container4.</p>
+    <code>Some code in div_container4</code>
+    <p>Paragraph 4 in div_container4.</p>
+</div>
+<p>Paragraph 5 in div_container4.</p>
+<br>
+<h3>CSS Attribute Selectors</h3>
+<a href="http://www.w3schools.com">w3schools.com</a>
+<a href="http://www.disney.com" target="_blank">disney.com</a>
+<a href="http://www.wikepedia.org" target="_top">wikipedia.org</a>
+<h3>CSS Pseudo_classes</h3>
+<div class="peseudo">
+    <p>Mouse Over Me</p>
+</div>
+<div id="nth">
+    <p>The first paragraph in div_nth</p>
+    <p>The second paragraph in div_nth</p>
+    <p>The third paragraph in div_nth</p>
+    <p>The fourth paragraph in div_nth</p>
+</div>
+<input type="email">
+</body>
+</html>

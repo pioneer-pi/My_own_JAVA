@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>After Class in 2021/9/20:Some basic knowledge about HTML</title>
+</head>
+<body>
+<h3>Input type date</h3>
+<!--Input Type Date-->
+<form>
+    Enter a date before 2017-09-01:<br/>
+    <input type="date" max="2017-09-01"><br/>
+    Enter a date after 2017-09-01:<br/>
+    <input type="date" min="2017-09-01"><br/>
+</form>
+<br/>
+<h3>Input type datetime-local</h3>
+<!--Input Type Datetime-local-->
+<form>
+    Birthday(date and time): <br/>
+    <input type="datetime-local">
+</form>
+<br/>
+<h3>Input type number</h3>
+<!--Input Type Number-->
+<form>
+    Quantity(between 1 and 10,step 2):<br/>
+    <input type="number" min="1" max="10" step="2">
+</form>
+<h3>Textarea</h3>
+<!--即使前端使用html5或者JS进行限制，后端仍需要进行数据校验-->
+<br/>
+<!--Textarea 多行文本框 可以通过cols和rows属性来规定textarea的尺寸大小-->
+<form>
+    <textarea rows="4" cols="50">
+        This is an default sentence.
+    </textarea>
+</form>
+<br/>
+<h3>Label</h3>
+<!--HTML Label Element-- label为input元素定义标注 点击文本会触发控件
+   for属性指定关联元素id属性值 实现联动操作-->
+<form>
+    <input type="checkbox" id="vehicle1">
+    <label for="vehicle1">I have a bike</label><br/>
+    <input type="checkbox" id="vehicle2">
+    <label for="vehicle2">I have a car</label><br/>
+    <input type="checkbox" id="vehicle3">
+    <label for="vehicle3">I have a airplane</label><br/>
+</form>
+<br/>
+<!--在label中嵌套input 该方法不需要绑定id-->
+<label><input type="radio" name="gender" id="male">Male</label><br/>
+<label><input type="radio" name="gender" id="female">Female</label><br/>
+<!--<label>I have a car<input type="checkbox"></label>-->
+<br/>
+<h3>Select Element</h3>
+<!--HTML Select Element     optgroup标签用于把相关选项组合在一起-->
+<select>
+    <option></option>
+    <option>Volvo</option>
+    <option>Saab</option>
+    <option>Opel</option>
+    <option selected>Audi</option>
+</select>
+<br/>
+<select>
+    <optgroup label="Swedish Cars">
+        <option>Volvo</option>
+        <option>Saab</option>
+    </optgroup>
+    <optgroup label="German Cars">
+        <option>Mercedes</option>
+        <option>Audi</option>
+    </optgroup>
+</select>
+<br/>
+<br/>
+<h3>DataList</h3>
+<!--HTML DataList Element-->
+<from>
+    <input list="browsers">
+    <datalist id="browsers">
+        <option>Internet Explorer</option>
+        <option>Firefox</option>
+        <option>Chrome</option>
+        <option>Opera</option>
+        <option>Safari</option>
+    </datalist>
+</from>
+<form>
+    <input list="tea">
+    <datalist id="tea">
+        <option>铁观音</option>
+        <option>龙井</option>
+        <option>大红袍</option>
+        <option>小甘菊</option>
+        <option>🍵</option>
+    </datalist>
+</form>
+<form>
+    <input list="locations">
+    <datalist id="locations">
+        <option>丹青楼</option>
+        <option>成栋楼</option>
+        <option>锦绣楼</option>
+    </datalist>
+</form>
+<h3>Button Element</h3>
+<!--Button Element-->
+<button type="submit">
+    <img src="../../resources/images/waves.png" alt="can't load it">
+</button>
+<br/><br/>
+<button type="submit">Click me!</button>
+<br/>
+<br/>
+<form>
+    <input type="text" value="YingPai"> <br>
+    <input type="password"><br>
+    <select>
+        <option></option>
+        <option>Volvo</option>
+        <option>Saab</option>
+        <option>Opel</option>
+        <option selected>Audi</option>
+    </select>
+    <button type="reset">重置button</button><i>该按钮会重置该表单所有内容</i>
+</form>
+<h3>Input元素属性:name和value</h3>
+<form>
+    First name:<br/>
+    <input type="text" value="Yingpai"><br/>
+    Last name:<br/>
+    <input type="text">
+</form>
+<br/>
+<form action="../action_page.txt" method="post">
+    First name:<input type="text" name="firstname"><br>
+    Last name:<input type="text" name="lastname"><br>
+    <button type="submit">Submit</button>
+</form>
+<h3>Input元素属性:readonly</h3>
+<form>
+    <input readonly type="text" value="readonly:can't change it,but you can copy it.">
+</form>
+<h3>Input元素属性:placeholder属性</h3>
+<form action="../action_page.txt" method="post">
+    Your Name:<input name="your name" placeholder="请输入你的名字" type="text"><br/>
+    Your Password:<input name="your password" placeholder="请输入你的密码" type="text"><br/>
+</form>
+<br/>
+<form>
+    Email:
+    <input type="text" name="email"><br/>
+    Country:
+    <input type="text" name="email" placeholder="China" readonly><br/>
+</form>
+<br/>
+<form>
+    <input type="text" placeholder="请输入用户名"><br/>
+    <input type="password">
+</form>
+<h3>Disabled属性</h3>
+<form>
+    First name:
+    <input type="text" name="fname" placeholder="请输入你的名"><br/>
+    Last name:
+    <input type="text" name="lname" value="Wang" disabled><br/>
+    <input type="checkbox" id="vehicle" disabled>
+    <label for="vehicle">I have a bike</label> <br>
+    <select disabled>
+        <option></option>
+        <option>Volvo</option>
+        <option>Saab</option>
+        <option>Opel</option>
+        <option selected>Audi</option>
+    </select><br/>
+    <input list="country" name="country" placeholder="请选择你的国家">
+    <datalist id="country">
+        <option>China</option>
+        <option>UK</option>
+        <option>Canada</option>
+    </datalist>
+</form>
+<h3>required属性</h3>
+<form action="../action_page.txt">
+    <input type="text" required name="text"><br/>
+    <input type="checkbox" id="vehicle4" name="vehicle4" required>
+    <label for="vehicle4">I have a bike</label> <br/>
+    <select required name="car" name="cars">
+        <option value="">None</option>
+        <option value="1">Volvo</option>
+        <option value="2">Saab</option>
+        <option value="3">Mercedes</option>
+        <option value="4">Audi</option>
+    </select><br/>
+    <button type="submit">Submit</button>
+</form>
+</body>
+</html>

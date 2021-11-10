@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ol id="adv_ol">
+    <li>HTML实验</li>
+    <li>CSS实验</li>
+</ol>
+<input id="exp">
+<button id="advitem">追加</button>
+</body>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $("#advitem").click(() =>{
+        let input = $("#exp");
+        let context = input.val();
+        input.val("");
+        let newItem = $`<li>${context}</li>`;
+        newItem.css("display","none");
+        $("#adv_ol").append(newItem);
+        newItem.fadeIn(2000);
+    })
+</script>
+</html>

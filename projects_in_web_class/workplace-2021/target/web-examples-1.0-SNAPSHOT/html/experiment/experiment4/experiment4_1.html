@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Experiment4_1</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        .sidebar{
+            width: 300px;
+            background-color: #f1f1f1;
+        }
+        h2.header{
+            padding: 15px 20px;
+            background-color: #03a9f4;
+            color: white;
+        }
+        .header a{
+            display: block;
+            text-decoration: none;
+            color: white;
+        }
+        .content ul{
+            background-color: #555;
+            display: block;
+            list-style-type: none;
+        }
+
+        .content li a{
+            display: block;
+            text-decoration: none;
+            color: black;
+            padding: 15px 20px;
+        }
+        h2.header:hover{
+            background-color: black;
+        }
+        .content li a:hover{
+            color: white;
+            background-color: #555555;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="sidebar">
+        <h2 class="header" id="header1"><a href="#">云技术管理</a></h2>
+
+        <ul class="content" id="content1">
+            <li><a href="#"><b>云服务器</b></a></li>
+            <li><a href="#"><b>云数据库</b></a></li>
+            <li><a href="#"><b>负载均衡</b></a></li>
+        </ul>
+
+        <h2 class="header" id="header2"><a href="#">安全管理</a></h2>
+
+        <ul class="content" id="content2">
+            <li><a href="#"><b>云盾控制台</b></a></li>
+            <li><a href="#"><b>DDos高防IP</b></a></li>
+            <li><a href="#"><b>Web应用防火墙</b></a></li>
+            <li><a href="#"><b>CA证书服务</b></a></li>
+        </ul>
+
+    </div>
+</div>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function (){
+        $(".content").hide();
+        $("#header1").click(()=>{
+            $("#content1").slideToggle(300);
+            let content2 = $("#content2");
+            content2.not(":hidden").slideUp(300);
+        })
+        $("#header2").click(()=>{
+            $("#content2").slideToggle(300);
+            let content1 =$("#content1");
+            content1.not(":hidden").slideUp(300)
+        })
+    })
+</script>
+</body>
+</html>

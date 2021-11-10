@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>After Class in 10.4</title>
+    <style>
+        h3:hover{
+            background-color: pink;
+            color: white;
+        }
+        #table2 table{
+            border-collapse: collapse;
+            width: 100%;
+        }
+        #table2 th,#table2 td{
+            padding: 8px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+        #table2 tbody tr:nth-child(odd){
+            background-color: #f2f2f2;
+        }
+        #table2 thead{
+            background-color: #4caf50;
+            color: white;
+        }
+        #table2 tbody tr:hover{
+            background-color: #f2f2f2;
+        }
+        #nav li{
+            display: inline;
+        }
+        #block span.block{
+            display: block;
+            height: 25px;
+            padding: 10px;
+            border: 1px solid red;
+        }
+        span.label{
+            display: inline-block;
+            padding: 15px;
+            border: 2px solid red;
+            height: 25px;
+        }
+        #a-pseudo a:link{
+            color: red;
+        }
+        #a-pseudo a:visited{
+            color: green;
+        }
+        #a-pseudo a:hover{
+            background-color: pink;
+            text-decoration: none;
+        }
+        #a-pseudo a:active{
+            color: blue;
+        }
+        #link-button a{
+            display: inline-block;
+            color: white;
+            background-color: #f44336;
+            text-decoration: none;
+            padding: 8px 16px;
+        }
+        #link-button a:hover{
+            background: red;
+        }
+        #inline-block a{
+            display: inline-block;
+            background-color: #f44335;
+            color: white;
+            padding: 14px 25px;
+            margin: 5px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        div.visible{
+            display: inline-block;
+            background-color: #eee;
+            width: 200px;
+            height: 50px;
+            border: 1px dotted black;
+            overflow: scroll;
+        }
+        p.float{
+            overflow: auto;
+            border: 1px solid red;
+        }
+        p.float img{
+            float: left;
+            width: 270px;
+            height: 200px;
+            margin-left: 15px;
+            margin-right: 15px;
+        }
+        .float{
+            clear: left;
+        }
+        div.static{
+            position: static;
+            left: 50px;
+            border: 3px solid green;
+        }
+        div.relative{
+            position: relative;
+            left: 30px;
+            border: 3px solid green;
+        }
+        div.fixed{
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            width: 300px;
+            border: 3px solid green;
+        }
+        div.absolute{
+            position: absolute;
+            top: 80px;
+            right: 0;
+            width: 200px;
+            height: 100px;
+            border: 3px solid green;
+        }
+        div.relative2{
+            position: relative;
+            width: 400px;
+            height: 200px;
+            border: 3px solid green;
+        }
+        div.main{
+            position: relative;
+            width: 400px;
+            height: 200px;
+            border: 3px solid green;
+        }
+        button.icon{
+            position: absolute;
+            right: 15px;
+            bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+<h3>CSS Table</h3>
+<table id="table2">
+    <thead>
+    <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Savings</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>Peter</td>
+        <td>Griffin</td>
+        <td>tr1</td>
+    </tr>
+    <tr>
+        <td>Lois</td>
+        <td>Griffin</td>
+        <td>tr2</td>
+    </tr>
+    </tbody>
+</table>
+<h3>CSS display</h3>
+<div id="nav">
+    <p>Display a list of links as horizon</p>
+    <ul>
+        <li><a href="#">Home</a> </li>
+        <li><a href="#">News</a> </li>
+        <li><a href="#">Contact</a> </li>
+        <li><a href="#">About</a> </li>
+    </ul>
+</div>
+<div id="block">
+    A display property with a value of "block"
+    <span class="block">a line break between the two elements.</span>
+</div>
+<h4>inline-block</h4>
+<span class="label">label</span>label<br/>
+label
+<h3>CSS Links</h3>
+<div id="a-pseudo">
+    <a href="pseudo.html">This is a link.</a>
+</div>
+<div id="link-button">
+    <p>按钮样式的超链接</p>
+    <a href="#">This is a link-button.</a>
+</div>
+<div id="inline-block">
+    <table>
+        <tr>
+            <td>HTML实验</td>
+            <td><a href="#">编辑</a></td>
+            <td><a href="#">删除</a></td>
+        </tr>
+        <tr>
+            <td>CSS实验</td>
+            <td><a href="#">编辑</a> </td>
+            <td><a href="#">删除</a> </td>
+        </tr>
+    </table>
+</div>
+<h3>CSS overflow</h3>
+<div class="visible">
+    You can use the overflow property when you want to have
+    better control of the layout.The overflow property specifies
+    what happens if content overflows an element's box.
+</div>
+<h3>CSS float</h3>
+<p class="float"><img src="../../resources/images/waves2.png">Loremasdasdasdljasldjlsajd
+asldjlasjdlkasdjklasdjklasjdklasdjlskad
+alsdkjasldjlksajdlkasjdlkasjdlaskjdasd
+asdjlaskjdlkasjdlkasjdiowqruoqhflnzx,csaldjwqknjelqjwiojdlznxc,nxzjlajsdljqw
+alskdjlkqwjoieuqworuhkzbxc,zxnmcklhahdqw
+alsdjlawjeoiqueioqyeuqiryuiqgfhjdbzxc,nzx.cm;lasjdowqdqhwl
+asldjalsdjoqpwjdlajsldn,zxncj,bnv,mbxckjlajlsdj</p>
+<h3>CSS Position:static relative fixed absolute</h3>
+<div class="absolute">
+    The div element has position: absolute2
+</div>
+<div class="static">
+    The div element has position: static
+</div>
+<div class="relative">
+    The div element has position: relative
+</div>
+<div class="fixed">
+    The div element has position: fixed
+</div>
+<div class="relative2">
+    The div element has position: relative2
+    <div class="absolute">
+        The div element has position: absolute
+    </div>
+</div>
+<div class="main">
+    <p>在指定容器右下角，模拟一个添加按钮</p>
+    <button class="icon">+</button>
+</div>
+</body>
+</html>

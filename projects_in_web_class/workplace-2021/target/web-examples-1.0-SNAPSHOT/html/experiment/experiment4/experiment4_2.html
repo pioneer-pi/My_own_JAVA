@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Experiment4_2</title>
+</head>
+<body>
+<div class="container">
+    <h1>注册</h1>
+    <label> <input type="checkbox" id="agree">我已阅读相关说明并遵守相关法律</label>
+    <form action="#" id="form">
+        <div class="content">
+            用户名:<input type="text" id="username">
+            <br>
+            未来意向:
+            <label><input type="radio" name="work" value="1">Java工程师</label>
+            <label><input type="radio" name="work" value="2">测试工程师</label>
+            <label><input type="radio" name="work" value="3">前端工程师</label>
+            <br>
+            <br>
+            请从以下课程中选择2项最喜欢的课程
+            <br>
+            <ul>
+                <li><label><input type="checkbox" name="course">Web开发技术</label></li>
+                <li><label><input type="checkbox" name="course">软件项目管理</label></li>
+                <li><label><input type="checkbox" name="course">数据库原理</label></li>
+                <li><label><input type="checkbox" name="course">系统分析与设计</label></li>
+            </ul>
+            地址:
+            <ul id="ul_address"></ul>
+            <input name="address">
+            <button type="button" id="address">添加地址</button>
+            <br>
+        </div>
+        <button type="submit" id="submit">提交</button>
+    </form>
+</div>
+</body>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function (){
+        let Forminput = $("#form :input").prop("disabled",true);
+        let Username = false;
+        let Course = false;
+        $("#agree").click(function (){
+            let dis = !$(this).prop("checked");
+            Forminput.not($("button[type=submit]")).prop("disabled",dis);
+
+        })
+
+        $("#username").change(function (){
+            if ($(this).val().length < 6){
+                alert("用户名长度必须大于等于6");
+                Username = false;
+            }else{
+                Username = true;
+            }
+        })
+        // const amount = 2;
+        const courses = $("input[name=course]");
+        courses.click(()=>{
+            // let disable = $("input[name=work]").filter(":checked").length > amount;
+            if (courses.filter(":checked").length >= 2){
+                courses.not(":checked").prop("disabled",true);
+                Course = true;
+            }
+            else{
+                Course = false;
+                courses.prop("disabled",false);
+            }
+        })
+
+        $("#address").click(()=>{
+            let input=$("input[name=address]");
+            let context = input.val();
+            input.val("");
+
+            let newItem = $(`<li>${context}</li>`);
+            newItem.css("display","none");
+            $("#ul_address").append(newItem);
+            newItem.fadeIn(2000);
+        })
+
+        $("#username,input[name=course]").change(()=>{
+            if (Username && Course){
+                $("button[type=submit]").prop("disabled",false);
+            }else{
+                $("button[type=submit]").prop("disabled",true);
+            }
+        })
+
+        let radios = $("input[type=radio]");
+        radios.click(function (){
+            let secClick = $(this).data("value");
+            if (secClick){
+                $(this).prop("checked",false);
+                $(this).data("value",false);
+            }else{
+                $(this).data("value",true);
+                radios.not(this).data("value",false);
+            }
+        })
+    })
+</script>
+</html>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebContextManager">
+    <option name="state">
+      <map>
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/html/afterClass/afterClass_10_20_JQuery.html" value="file://$PROJECT_DIR$/src/main/webapp/html/afterClass" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/html/homework/homework1/example.html" value="file://$PROJECT_DIR$/src/main/webapp/html/homework/homework1" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/html/homework/homework3/homework3.html" value="file://$PROJECT_DIR$/src/main/webapp/html/homework/homework3" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/html/inClass/inClass_10_11.html" value="file://$PROJECT_DIR$/src/main/webapp/html/inClass" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/html/index.html" value="file://$PROJECT_DIR$/src/main/webapp/html" />
+      </map>
+    </option>
+  </component>
+</project>

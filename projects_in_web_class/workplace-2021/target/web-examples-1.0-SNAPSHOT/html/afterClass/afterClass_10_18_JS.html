@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>After Class in 10.18--JS</title>
+</head>
+<body>
+<p id="demo">A Paragraph.</p>
+<button type="button" onclick="myFunction()">Try it.</button>
+<p><strong>Note:</strong> myFunction is stored in an external</p>
+<button type="button" onclick="show()">点击获取JS对象的值</button>
+<div id="demo2">被替换为JS对象中的值</div>
+<div id="arrays"></div>
+<h1>My First Web Page</h1>
+<p id="demo3" onclick="document.getElementById('demo3').innerHTML = 'Ooooops!'">My First Paragraph</p>
+<button type="button" onclick="showAlert()">点击弹出警告框</button>
+<button type="button" onclick="document.getElementById('demo2').innerHTML = 5 + 6">Try it,change the value of id equal to demo2 to 5 + 6.</button>
+<h1 onclick="changeHeadText(this)">点击此标题内容会被修改</h1>
+<p>输入的英文字母基于onkeyup事件，自动转为大写</p>
+<input type="text" onkeyup="upperCase(this)"><br>
+<button type="button" onclick="changeInputType()">点击修改输入框为checkbox</button><br/>
+<input type="text" name="username">
+<br/>
+<form id="register">
+    <label>
+        <input type="checkbox" onchange="checkAgree(this)">
+        已阅读并同意条款
+    </label><br/>
+    <button type="submit" disabled>提交</button>
+</form>
+<div class="nav">
+    <button type="button" onclick="changeColor()">点击随机变颜色</button>
+    <p>Lorem ipsum dolor sit amet.</p>
+</div>
+<br>
+<p>选择课程后，传递ID值，从JS数组中过滤出对象，显示在下面</p>
+<select name="course" onchange="loopFilter(this.value)">
+    <option></option>
+    <option value="1">Java</option>
+    <option value="2">C++</option>
+</select>
+<span id="teacherName"></span>
+</body>
+<script>
+    let loopFilter = (id) =>{
+        let courses = [
+            {id:1,name:"Java",teacher:"BO"},
+            {id:2,name:"C++",teacher: "SUN"}
+        ];
+        let course = courses.find(c => c.id==id);
+        document.getElementById("teacherName").innerHTML=course !=null?course.teacher:"";
+    }
+    let changeColor = () =>{
+        let ps = document.querySelectorAll("div.nav p")
+        let r = Math.round(Math.random()*255);
+        let g = Math.round(Math.random()*255);
+        let b = Math.round(Math.random()*255);
+        ps.forEach(p=>{
+            p.style.color = `rgb(${r},${g},${b})`;
+        })
+    }
+    let checkAgree = (c) =>{
+        let submitButton = document.querySelector("#register button[type=submit]");
+        submitButton.disabled = !c.checked;
+    }
+    let changeInputType = () =>{
+        let input = document.querySelector("input[name=username]");
+        input.type = input.type === "text"? "checkbox":"text";
+    }
+    let upperCase = (input)=>{
+        input.value = input.value.toUpperCase();
+    }
+    let changeHeadText = (h) =>{
+        h.innerHTML = "Ooooooops!"
+    }
+    function myFunction(){
+        document.getElementById("demo").innerHTML = "Paragraph changed <style> #demo{color: red}</style>"
+    }
+    let person = {
+        firstName: "John",
+        lastName: "Doe",
+        id: 5566,
+        getFullName(){
+            return `${this.firstName}/${this.lastName}`
+        }
+    }
+    let show = () =>{
+        document.getElementById("demo2").innerHTML = person.getFullName();
+    }
+    let text = "";
+    for (let i = 0;i < 5;i++){
+        text += `The number is ${i}`;
+    }
+    document.getElementById("arrays").innerHTML = text;
+
+    let showAlert = () =>{
+        window.alert(5+6)
+    }
+    document.write(5);
+</script>
+</html>

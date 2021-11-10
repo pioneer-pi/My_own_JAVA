@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,
+initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
+    <title>After Class 10.11</title>
+    <style>
+        h3{
+            height: 30px;
+            padding: 0;
+            margin: 0;
+            color: white;
+            background-color: pink;
+            transition: height 2s,font-size 2s;
+        }
+        h3:hover{
+            height: 50px;
+            font-size: 2em;
+            text-align: center;
+        }
+        #flex,#flex2,#flex3{
+            display: flex;
+            background-color: DodgerBlue;
+        }
+        #flex2>div,#flex3>div{
+            background-color: #f1f1f1;
+            width: 100px;
+            margin: 10px;
+            text-align: center;
+            line-height: 75px;
+            font-size: 30px;
+        }
+        #flex2{
+            flex-direction: column;
+        }
+        #flex3{
+            flex-wrap: wrap;
+            /*justify-content: start;*/
+            /*justify-content: end;*/
+            /*justify-content: center;*/
+            /*justify-content: space-between;*/
+            justify-content: space-around;
+        }
+        #flex-2,#flex-3{
+            width: 25px;
+            margin: 5px;
+            background-color: red;
+            line-height: 30px;
+            text-align: center;
+
+        }
+        #flex-1{
+            background-color: blue;
+            width: 50px;
+            margin: 10px;
+            line-height: 50px;
+            font-size: 20px;
+            text-align: center;
+        }
+        #flex{
+            align-items: start;
+            align-items: end;
+            align-items: center;
+        }
+
+    </style>
+</head>
+<body>
+<h3>CSS Flexbox Layout Module</h3>
+<div id="flex">
+    <div id="flex-1">1</div>
+    <div id="flex-2">2</div>
+    <div id="flex-3">3</div>
+</div>
+<div id="flex2">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+</div>
+<div id="flex3">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+</div>
+<h3>CSS @media Rule</h3>
+</body>
+</html>
