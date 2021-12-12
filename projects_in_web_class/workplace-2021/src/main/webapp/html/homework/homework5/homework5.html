@@ -82,11 +82,11 @@
         $(".fab").on({
             mouseenter: function (){
                 $("#fab-button").html("<i class='material-icons'>remove_circle</i>")
-                $(".fab-menu ul").fadeIn(700);
+                $(".fab-menu ul").fadeToggle(100);
             },
             mouseleave: function (){
                 $("#fab-button").html("<i class='material-icons'>account_circle</i>")
-                $(".fab-menu ul").fadeOut(700);
+                $(".fab-menu ul").fadeToggle(100);
             }
         })
     })

@@ -11,9 +11,21 @@
 <html>
 <head>
     <title>Title</title>
+    <style>
+        table tr{
+            text-align: center;
+        }
+        table th,table td{
+            padding: 10px;
+        }
+    </style>
 </head>
 <body>
 <table>
+    <tr>
+        <th>姓名</th>
+        <th>时间</th>
+    </tr>
     <c:forEach items="${teachers}" var="t">
         <tr>
             <td><a href="/myWeb/updateteachers?tid=${t.id}">${t.name}</a> </td>
